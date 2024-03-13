@@ -288,5 +288,20 @@
     }
   }
 </style>
-<app-chest></app-chest>
-<router-outlet></router-outlet>
+
+<div class="content" role="main">
+
+  <div class="card highlight-card card-small">
+    <span>Vous avez trouvé le coffre!</span>
+  </div>
+
+  <div class="card-container">
+
+    <div class="container">
+      <input class="password" #password id="password" type="text" placeholder="Entrez le mot de passe!">
+      <button (click)="onSubmit()">Valider</button>
+    </div>
+
+  </div>
+
+</div>
