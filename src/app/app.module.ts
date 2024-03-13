@@ -5,22 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { ChestComponent } from './chest/chest.component';
-import { SuccessComponent } from './success/success.component';
+import { ErrorComponent } from './error/error.component';
 import { DeviseComponent } from './devise/devise.component';
 import { FartComponent } from './fart/fart.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [				
+  declarations: [
     AppComponent,
-      ChestComponent,
-      SuccessComponent,
-      DeviseComponent,
-      FartComponent
-   ],
+    ChestComponent,
+    ErrorComponent,
+    DeviseComponent,
+    FartComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

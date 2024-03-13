@@ -14,12 +14,18 @@ export class ChestComponent implements OnInit {
   ngOnInit() {
   }
 
+  showError: boolean = false;
+  showSuccess: boolean = false;
+
   onSubmit() {
     if (this.password && this.password?.nativeElement?.value === '123456') {
-      console.log('Form submitted', this.password.nativeElement.value);
-      window.location.href = "/success";
+      // console.log('Form submitted', this.password.nativeElement.value);
+      // window.location.href = "/fart";
+      this.showSuccess = true;
+      this.showError = false;
     } else {
-      console.log('Form not submitted', this.password?.nativeElement?.value);
+      this.showSuccess = false;
+      this.showError = true;
     }
   }
 
